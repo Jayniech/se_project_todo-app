@@ -1,17 +1,28 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+This is The Simple ToDo App. Here you can add Todos and set due dates for each Todo. As you complete each Todo, you can mark the checkbox or delete them.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+This ToDo App was created in order to keep track of daily tasks. You can use this to make a list of chores, or track assignments for class or work. With the optional due date feature, you can keep track of deadlines and avoid missed or late assignments.
 
-## Technology
+## Technologies
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+- Semantic HTML5
+- Flexbox
+- Grid layout
+- @media queries
+- validationConfig object
+- FormValidator and Todo classes
+- Exports and Imports
+
+## Images
+
+![alt text](./images/demos/Add_new_todo-snippet-min.png)
+![alt text](./images/demos/ToDo-snippet-min.png)
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+- [Link to Project](https://jayniech.github.io/se_project_todo-app/)
