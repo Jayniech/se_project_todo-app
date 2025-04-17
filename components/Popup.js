@@ -24,7 +24,6 @@ export default class Popup {
 
   setEventListeners() {
     this._popupElement.addEventListener("click", (evt) => {
-      debugger;
       if (
         evt.target === this._popupElement ||
         evt.target === this._popupCloseBtn

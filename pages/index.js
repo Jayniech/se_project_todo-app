@@ -12,7 +12,19 @@ const addTodoCloseBtn = addTodoPopupEl.querySelector(".popup__close");
 const todosList = document.querySelector(".todos__list");
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
-  handleFormSubmit: () => {},
+  handleFormSubmit: (evt) => {
+    //const name = evt.target.name.value;
+    //const dateInput = evt.target.date.value;
+    // Create a date object and adjust for timezone
+    //const date = new Date(dateInput);
+    //date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+    // const id = uuidv4();
+    //const values = { name, date, id };
+    //const todo = generateTodo(values);
+    //section.addItem(todo);
+    //addTodoPopup.close();
+    //newTodoValidator.resetValidation();
+  },
 });
 addTodoPopup.setEventListeners();
 
@@ -39,22 +51,22 @@ addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
 });
 
-addTodoForm.addEventListener("submit", (evt) => {
-  evt.preventDefault();
-  const name = evt.target.name.value;
-  const dateInput = evt.target.date.value;
+//addTodoForm.addEventListener("submit", (evt) => {
+//  evt.preventDefault();
+//  const name = evt.target.name.value;
+//  const dateInput = evt.target.date.value;
+//
+// Create a date object and adjust for timezone
+//  const date = new Date(dateInput);
+//  date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
-  // Create a date object and adjust for timezone
-  const date = new Date(dateInput);
-  date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
-
-  const id = uuidv4();
-  const values = { name, date, id };
-  const todo = generateTodo(values);
-  section.addItem(todo);
-  addTodoPopup.close();
-  newTodoValidator.resetValidation();
-});
+//  const id = uuidv4();
+//  const values = { name, date, id };
+//  const todo = generateTodo(values);
+//  section.addItem(todo);
+//  addTodoPopup.close();
+//  newTodoValidator.resetValidation();
+//});
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
 newTodoValidator.enableValidation();
