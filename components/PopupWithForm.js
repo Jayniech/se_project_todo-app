@@ -11,13 +11,10 @@ export default class PopupWithForm extends Popup {
   _getInputValues() {
     const values = {};
     this._inputList.forEach((input) => {
-      //add a key/value pair to the values object for each input
-      //the key is input.name
-      //the value is input.value
-      //need to use brackets notation
+      values[input.name] = input.value;
     });
+    console.log(values);
     return values;
-    console.log(this._inputList);
   }
 
   setEventListeners() {
@@ -26,8 +23,7 @@ export default class PopupWithForm extends Popup {
       evt.preventDefault();
       const inputValues = this._getInputValues();
 
-      //Pass result of getInputValues to submission handler
-      this._handleFormSubmit(evt);
+      this._handleFormSubmit(inputValues);
     });
   }
 }
